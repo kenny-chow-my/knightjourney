@@ -2,7 +2,8 @@
 Developed by Kenny Chow
 
 ## Build
-If you received the source as a zip file, extract it first.
+If you received the source as a zip file, extract it first. Otherwise, clone it from the following repo:
+`https://github.com/kenny-chow-my/knightjourney.git`
 
 1. Install Maven. Download and install from https://maven.apache.org/download.cgi
 2. Run `mvn clean` in the source folder of this project
