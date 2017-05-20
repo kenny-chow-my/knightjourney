@@ -28,6 +28,30 @@ public class Board {
         }
     }
 
+    private int[][] diagonal;
+    public void calculateDiagonal(int x, int y){
+        int xy = (x+y);
+        this.diagonal = new int[cols][rows];
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++){
+                if((i+j) <= xy) {
+                    diagonal[j][i] = 1;
+                }
+                else{
+                    diagonal[j][i] = 0;
+                }
+            }
+        }
+    }
+
+    public int[][] getDiagonal(){
+        return diagonal;
+    }
+
+    public boolean isValidPositionUpperLeftDiagonal(int x, int y) {
+        return (x < cols && y < rows && x >= 0 && y >= 0) && (diagonal[x][y] == 1);
+    }
+
     public boolean isValidPosition(int x, int y){
         return (x < cols && y < rows && x >= 0 && y >= 0);
     }
@@ -63,4 +87,6 @@ public class Board {
 
         return sb.toString();
     }
+
+
 }

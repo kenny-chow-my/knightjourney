@@ -25,7 +25,7 @@ public class Knight implements IPiece {
         List<Integer[]> validMoves = new ArrayList();
 
         for (int i = 0; i < possibleX.length; i++){
-            if(board.isValidPosition(x + possibleX[i], y + possibleY[i])){
+            if(board.isValidPositionUpperLeftDiagonal(x + possibleX[i], y + possibleY[i])){
                 Integer[] tmp = {x + possibleX[i], y + possibleY[i]};
                 validMoves.add(tmp);
             }

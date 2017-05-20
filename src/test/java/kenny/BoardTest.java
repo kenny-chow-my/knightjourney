@@ -36,4 +36,11 @@ public class BoardTest{
         assertFalse(b.isValidPosition(1,0));
         assertFalse(b.isValidPosition(0,0));
     }
+
+    @Test
+    public void calculateDiagonal(){
+        Board b = new Board(5,5);
+        b.calculateDiagonal(2,3);
+        b.getDiagonal();
+    }
 }

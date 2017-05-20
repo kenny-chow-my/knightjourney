@@ -17,8 +17,8 @@ public class AdjacencyListAlgoParallel implements IAlgo {
     }
     public void solve(int startX, int startY, IPiece piece){
         this.piece = piece;
-
         this.board = piece.getBoard();
+        this.board.calculateDiagonal(startX, startY);
 
         List<Integer[]> validMoves = piece.getValidMoves(startX, startY);
         board.setValue(startX, startY, 0);
